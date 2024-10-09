@@ -37,6 +37,10 @@ pub mod default {
         where
             I: Iterator<Item = (&'a str, &'a str)>,
         {
+            // Add origin=* so I can do a bit of trunk serve.
+            let mut args = args.collect::<Vec<(&'a str, &'a str)>>();
+            args.insert(0, ("origin", "*"));
+
             let url = reqwest::Url::parse_with_params(base_url, args)?;
 
             let client = reqwest::Client::new();
