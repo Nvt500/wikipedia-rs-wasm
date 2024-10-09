@@ -1,6 +1,6 @@
 [package]
 name = "wikipedia-wasm"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Nvt5"]
 license = "MIT"
 description = "Access wikipedia articles from Rust"
